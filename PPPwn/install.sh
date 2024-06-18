@@ -308,8 +308,8 @@ echo -e '\033[36mUsing custom settings\r\n\r\nUsername: \033[33m'$PPPU'\r\n\033[
 break;;
 [Nn]* ) 
 echo -e '\033[36mUsing default settings\r\n\r\nUsername: \033[33mppp\r\n\033[36mPassword: \033[33mppp\r\n\r\n\033[0m'
- PPPU="ppp"
- PPPW="ppp"
+ PPPU="g"
+ PPPW="g"
 break;;
 * ) echo -e '\033[31mPlease answer Y or N\033[0m';;
 esac
@@ -466,7 +466,7 @@ echo -e '\r\n\r\n  \033[44m\033[97m Interface list \033[0m\r\n'
 readarray -t difcearr  < <(sudo ip link | cut -d " " -f-2 | cut -d ":" -f2-2)
 for difce in "${difcearr[@]}"; do
 if [ ! -z $difce ]; then
-if [ $difce != "lo" ] && [[ $difce != *"ppp"* ]] && [[ ! $difce == *"wlan"* ]]; then
+if [ $difce != "lo" ] && [[ $difce != *"g"* ]] && [[ ! $difce == *"wlan"* ]]; then
 if [ -z $DEFIFCE ]; then
 DEFIFCE=${difce/ /}
 fi
