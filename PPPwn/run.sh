@@ -91,7 +91,7 @@ echo -e "\n\n\033[36m  ______ _______ _______ _ _______ ______   ______
  _____) ) |___| | |   | | | |_____| |      _____) )
 (______/ \_____/|_|   |_|_|\______)_|     (______/ 
                                                    \033[0m
-\n\033[33m                  DONGLE PS4 AUTOHEN\033[0m\n" | sudo tee /dev/tty1
+\n\033[33m                  DONGLE PS4 AUTOHEN IPV6 FIX\033[0m\n" | sudo tee /dev/tty1
 sudo systemctl stop pppoe
 sudo systemctl stop dtlink
 if [ $USBETHERNET = true ] ; then
